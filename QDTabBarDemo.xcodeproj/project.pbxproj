@@ -15,6 +15,9 @@
 		8E8976031D75260400BA84A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E8976011D75260400BA84A7 /* LaunchScreen.storyboard */; };
 		8E89760E1D75260400BA84A7 /* QDTabBarDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E89760D1D75260400BA84A7 /* QDTabBarDemoTests.m */; };
 		8E8976191D75260400BA84A7 /* QDTabBarDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8976181D75260400BA84A7 /* QDTabBarDemoUITests.m */; };
+		8E89762B1D7526A900BA84A7 /* UITabBar+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E89762A1D7526A900BA84A7 /* UITabBar+Swizzling.m */; };
+		8E89762E1D75273900BA84A7 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E89762D1D75273900BA84A7 /* TabBarViewController.m */; };
+		8E8976311D75283000BA84A7 /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8976301D75283000BA84A7 /* HomeController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,12 @@
 		8E8976141D75260400BA84A7 /* QDTabBarDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QDTabBarDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E8976181D75260400BA84A7 /* QDTabBarDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QDTabBarDemoUITests.m; sourceTree = "<group>"; };
 		8E89761A1D75260400BA84A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E8976291D7526A900BA84A7 /* UITabBar+Swizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+Swizzling.h"; sourceTree = "<group>"; };
+		8E89762A1D7526A900BA84A7 /* UITabBar+Swizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+Swizzling.m"; sourceTree = "<group>"; };
+		8E89762C1D75273900BA84A7 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
+		8E89762D1D75273900BA84A7 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
+		8E89762F1D75283000BA84A7 /* HomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeController.h; sourceTree = "<group>"; };
+		8E8976301D75283000BA84A7 /* HomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +110,13 @@
 		8E8975F21D75260400BA84A7 /* QDTabBarDemo */ = {
 			isa = PBXGroup;
 			children = (
+				8E8976281D75265C00BA84A7 /* QDTabbar */,
 				8E8975F61D75260400BA84A7 /* AppDelegate.h */,
 				8E8975F71D75260400BA84A7 /* AppDelegate.m */,
 				8E8975F91D75260400BA84A7 /* ViewController.h */,
 				8E8975FA1D75260400BA84A7 /* ViewController.m */,
+				8E89762F1D75283000BA84A7 /* HomeController.h */,
+				8E8976301D75283000BA84A7 /* HomeController.m */,
 				8E8975FC1D75260400BA84A7 /* Main.storyboard */,
 				8E8975FF1D75260400BA84A7 /* Assets.xcassets */,
 				8E8976011D75260400BA84A7 /* LaunchScreen.storyboard */,
@@ -138,6 +150,17 @@
 				8E89761A1D75260400BA84A7 /* Info.plist */,
 			);
 			path = QDTabBarDemoUITests;
+			sourceTree = "<group>";
+		};
+		8E8976281D75265C00BA84A7 /* QDTabbar */ = {
+			isa = PBXGroup;
+			children = (
+				8E8976291D7526A900BA84A7 /* UITabBar+Swizzling.h */,
+				8E89762A1D7526A900BA84A7 /* UITabBar+Swizzling.m */,
+				8E89762C1D75273900BA84A7 /* TabBarViewController.h */,
+				8E89762D1D75273900BA84A7 /* TabBarViewController.m */,
+			);
+			path = QDTabbar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,8 +293,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E89762E1D75273900BA84A7 /* TabBarViewController.m in Sources */,
 				8E8975FB1D75260400BA84A7 /* ViewController.m in Sources */,
+				8E89762B1D7526A900BA84A7 /* UITabBar+Swizzling.m in Sources */,
 				8E8975F81D75260400BA84A7 /* AppDelegate.m in Sources */,
+				8E8976311D75283000BA84A7 /* HomeController.m in Sources */,
 				8E8975F51D75260400BA84A7 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,6 +442,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = QDTabBarDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xuqidong.QDTabBarDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -427,6 +454,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = QDTabBarDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xuqidong.QDTabBarDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

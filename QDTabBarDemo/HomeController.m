@@ -1,22 +1,17 @@
 //
-//  ViewController.m
+//  HomeController.m
 //  QDTabBarDemo
 //
 //  Created by xuqidong on 16/8/30.
 //  Copyright © 2016年 xuqidong. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "HomeController.h"
 
-@interface ViewController ()
-
-@end
-
-@implementation ViewController
-
+@implementation HomeController
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor grayColor];
     
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeContactAdd];
     [btn addTarget:self action:@selector(push) forControlEvents:UIControlEventTouchUpInside];
@@ -30,10 +25,4 @@
     vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 @end
